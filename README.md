@@ -12,6 +12,8 @@
 |---|---|
 | `Bike_Sales_Outlier_Lab.xlsx` | Dataset de ventas de bicicletas (diciembre 2021) usado en el Ejercicio 1 |
 | `Lab11_Visualizacion_Datos.ipynb` | Notebook de Colab con el desarrollo completo en Python |
+| `Excel Tabla Dinamica Outliers.png` | Captura de Excel: tabla dinámica, orden descendente, funciones GRANDE/PEQUEÑO y gráficos de dispersión |
+| `Excel Detalle 19dic Pedido261765.png` | Captura de Excel: detalle de los pedidos del 19 de diciembre, con el pedido 261765 identificado |
 
 ---
 
@@ -31,6 +33,8 @@ Al ordenar de mayor a menor la suma de `Order_Quantity`:
 - **¿Cuál fue la cantidad de ventas?** → **43 unidades**
 - **¿Qué entrada contribuye más a la suma en la tabla dinámica? ¿Qué número de pedido es el más responsable del valor atípico?** → **Sales_Order #261765**, con 11 unidades y $25.520 de ingreso (el mayor pedido individual de ese día).
 
+![Detalle de los pedidos del 19 de diciembre — pedido 261765 identificado](<Excel Detalle 19dic Pedido261765.png>)
+
 ### Paso 4 — Gráfico de dispersión
 
 El gráfico de dispersión de la suma diaria de `Order_Quantity` muestra al 19 de diciembre claramente separado del resto de los puntos: mientras los demás días se mueven entre 1 y 19 unidades, ese día alcanza 43. Esto lo confirma como valor atípico.
@@ -44,6 +48,8 @@ El gráfico de dispersión de la suma diaria de `Order_Quantity` muestra al 19 d
 | `=PEQUEÑO($E$4:$E$27; FILA($1:6))` | 1, 3, 3, 3, 4, 4 |
 
 **¿Qué función devolvería los 6 valores más bajos?** → `=PEQUEÑO($E$4:$E$27; FILA($1:6))` .
+
+![Tabla dinámica, funciones GRANDE/PEQUEÑO y gráficos de dispersión en Excel](<Excel Tabla Dinamica Outliers.png>)
 
 ### Tratamiento del valor atípico
 
@@ -87,13 +93,13 @@ Gráfico de barras con `asignaturas` vs. `calificaciones`.
 
 Gráfico de barras horizontales con `sitios` vs. `tiempos`.
 
-**Interpretación:** el Sitio C es el más rápido (0.9 s), mientras que el Sitio D es el más lento (3.0 s)  más de tres veces la demora del Sitio C. Considerando que se recomienda un tiempo de carga por debajo de 2 segundos, los sitios B y D requieren optimización.
+**Interpretación:** el Sitio C es el más rápido (0.9 s), mientras que el Sitio D es el más lento (3.0 s) — más de tres veces la demora del Sitio C. Considerando que se recomienda un tiempo de carga por debajo de 2 segundos, los sitios B y D requieren optimización.
 
 ### 3. Relación entre horas de estudio y rendimiento académico
 
 Gráfico de dispersión con línea de tendencia.
 
-**Interpretación:** correlación positiva muy fuerte (r ≈ 0.99) entre horas de estudio y calificaciones. Sin embargo, la relación no es perfectamente lineal: entre 5 y 30 horas cada bloque de estudio suma 5 puntos, mientras que a partir de las 30 horas la ganancia se reduce a 2-3 puntos un rendimiento decreciente.
+**Interpretación:** correlación positiva muy fuerte (r ≈ 0.99) entre horas de estudio y calificaciones. Sin embargo, la relación no es perfectamente lineal: entre 5 y 30 horas cada bloque de estudio suma 5 puntos, mientras que a partir de las 30 horas la ganancia se reduce a 2-3 puntos — un rendimiento decreciente.
 
 ### 4. Distribución de salarios en tres departamentos distintos
 
